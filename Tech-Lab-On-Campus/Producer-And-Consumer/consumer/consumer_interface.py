@@ -17,23 +17,16 @@ class mqConsumerInterface:
     def __init__(
         self, binding_key: str, exchange_name: str, queue_name: str
     ) -> None:
+        self.binding_key = binding_key
+        self.exchange_name = exchange_name
+        self.queue_name = queue_name 
         # Save parameters to class variables
 
         # Call setupRMQConnection
+        self.setupRMQConnection()
         pass
 
     def setupRMQConnection(self) -> None:
-        # Set-up Connection to RabbitMQ service
-
-        # Establish Channel
-
-        # Create Queue if not already present
-
-        # Create the exchange if not already present
-
-        # Bind Binding Key to Queue on the exchange
-
-        # Set-up Callback function for receiving messages
         pass
 
     def on_message_callback(
